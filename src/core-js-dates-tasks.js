@@ -191,13 +191,13 @@ function getCountWeekendsInMonth(month, year) {
  * Date(2024, 0, 31) => 5
  * Date(2024, 1, 23) => 8
  */
-function getWeekNumberByDate(date) {
-  const start = new Date(date.getUTCFullYear(), 0, 1);
-  const firstWeekDay = start.getDay() || 7;
-  const offset = firstWeekDay > 4 ? 0 : 1;
-  const daysLeft = Math.floor(date - start) / (1000 * 60 * 60 * 24);
-  return Math.ceil((daysLeft + offset) / 7);
-}
+// function getWeekNumberByDate(date) {
+//   const start = new Date(date.getUTCFullYear(), 0, 1);
+//   const firstWeekDay = start.getDay() || 7;
+//   const offset = firstWeekDay > 4 ? 0 : 1;
+//   const daysLeft = Math.floor(date - start) / (1000 * 60 * 60 * 24);
+//   return Math.ceil((daysLeft + offset) / 7);
+// }
 
 /**
  * Returns the date of the next Friday the 13th from a given date.
