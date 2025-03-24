@@ -217,7 +217,7 @@ function getNextFridayThe13th(date) {
   while (dateForFind.getUTCDay() !== 5) {
     dateForFind.setUTCMonth(dateForFind.getUTCMonth() + 1);
   }
-  dateForFind.setUTCHours(-24);
+
   return dateForFind;
 }
 
