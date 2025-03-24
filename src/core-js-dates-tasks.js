@@ -280,11 +280,11 @@ function getWorkSchedule(period, countWorkDays, countOffDays) {
   while (offset >= 0) {
     for (let i = 0; i < countWorkDays && offset >= 0; i += 1) {
       workingDays.push(new Date(currentDate));
-      currentDate.setDate(currentDate.getDate() + 1);
+      currentDate.setUTCDate(currentDate.getUTCDate() + 1);
       offset -= 1;
     }
     offset -= countOffDays;
-    currentDate.setDate(currentDate.getDate() + countOffDays);
+    currentDate.setUTCDate(currentDate.getUTCDate() + countOffDays);
   }
 
   return workingDays.map((date) =>
